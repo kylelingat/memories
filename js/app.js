@@ -13,6 +13,9 @@ var seven = document.getElementById("7")
 
 var cardsFlipped;
 var time;
+var temp = 0;
+var firstFlip = 0;
+var secondFlip = 0;
 var cardArray = [zero, one, two, three, four, five, six, seven];
 var cardCount = document.querySelectorAll(".flipper").length;
 //cardCount should be 8
@@ -53,3 +56,18 @@ function cardShuffle(){
 
 //flip and point logic
 
+function clickLogic(x) {
+    firstFlip++;
+    console.log(firstFlip + ' firstFlip');//remove later
+    if (firstFlip > 0) {
+      temp += x
+      console.log(temp + ' temp')//remove
+      if (temp / 2 == 1) {
+        zero.style.opacity = "0.5";
+        four.style.opacity = "0.5";
+        console.log('1 and 4 matched!')
+        temp = 0;
+        console.log(temp + ' temp')//remove       
+      } 
+    }
+}
