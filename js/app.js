@@ -31,6 +31,7 @@ function cardShuffle(){
   var randomizedCardArray = []
   for (var i = cardCount; i > 0; i--){
     shuffle = to8.splice(Math.floor(Math.random() * i), 1)[0];
+    //using splice for randomizer
     randomizedCardArray.push(shuffle);
   }
   //using push methods
