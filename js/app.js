@@ -45,6 +45,7 @@ function cardShuffle(){
   six.style.order = randomizedCardArray[6];
   seven.style.order = randomizedCardArray[7];
 }
+//http://www.w3schools.com/jsref/prop_style_order.asp
 
 
 //game start
