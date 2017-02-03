@@ -33,6 +33,7 @@ function cardShuffle(){
     shuffle = to8.splice(Math.floor(Math.random() * i), 1)[0];
     randomizedCardArray.push(shuffle);
   }
+  //using push methods
   console.log(randomizedCardArray + ' shuffled array')
   zero.style.order = randomizedCardArray[0];
   one.style.order = randomizedCardArray[1];
