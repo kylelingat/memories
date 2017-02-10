@@ -2,25 +2,40 @@ console.log('connected1')
 
 //initalizing variables
 
-var zero = document.getElementById("0")
-var one = document.getElementById("1")
-var two = document.getElementById("2")
-var three = document.getElementById("3")
-var four = document.getElementById("4")
-var five = document.getElementById("5")
-var six = document.getElementById("6") 
-var seven = document.getElementById("7")
+var zero = document.getElementById("0");
+var zerob = document.getElementById("b0");
+
+var one = document.getElementById("1");
+var oneb = document.getElementById("b1");
+
+var two = document.getElementById("2");
+var twob = document.getElementById("b2");
+
+var three = document.getElementById("3");
+var threeb = document.getElementById("b3");
+
+var four = document.getElementById("4");
+var fourb = document.getElementById("b4");
+
+var five = document.getElementById("5");
+var fiveb = document.getElementById("b5");
+
+var six = document.getElementById("6");
+var sixn = document.getElementById("b6");
+
+var seven = document.getElementById("7");
+var sevenb = document.getElementById("b7");
 
 var cardsFlipped;
 var time;
 var temp = 0;
+var tempb = 0;
 var firstFlip = 0;
 var secondFlip = 0;
 var cardArray = [zero, one, two, three, four, five, six, seven];
 var cardCount = document.querySelectorAll(".flipper").length;
 //cardCount should be 8
 //onclick event is located in index.html(inline)
-
 
 //shuffling
 function cardShuffle(){
@@ -55,19 +70,52 @@ function cardShuffle(){
 
 
 //flip and point logic
-
 function clickLogic(x) {
-    firstFlip++;
-    console.log(firstFlip + ' firstFlip');//remove later
-    if (firstFlip > 0) {
-      temp += x
-      console.log(temp + ' temp')//remove
-      if (temp / 2 == 1) {
-        zero.style.opacity = "0.5";
-        four.style.opacity = "0.5";
-        console.log('1 and 4 matched!')
-        temp = 0;
-        console.log(temp + ' temp')//remove       
-      } 
-    }
+  
+  if (x == 1) {
+    temp = 1;
+    firstFlip += 1;
+    zero.classList.toggle('flipped');
+    console.log('tempValue is ' + temp);
+    console.log('firstFlipValue is ' + firstFlip);
+  }
+  
+  if (x == 4) {
+    tempb = 1;
+    firstFlip += 1;
+    four.classList.toggle('flipped');
+    console.log('tempbValue is ' + tempb);
+    console.log('firstFlipValue is ' + firstFlip);
+  }
+
+  
+  if (x == 2) {
+    temp = 2;
+    firstFlip += 1;
+    one.classList.toggle('flipped');
+    console.log('tempValue is ' + temp);
+    console.log('firstFlipValue is ' + firstFlip);
+  }
+
+  if (x == 5) {
+    tempb = 2;
+    firstFlip += 1;
+    five.classList.toggle('flipped');
+    console.log('tempValue is ' + temp);
+    console.log('firstFlipValue is ' + firstFlip);
+  }
+
+
+
+  if (temp && tempb == 1) {
+    zerob.style.opacity = "0.5";
+    fourb.style.opacity = "0.5";
+    temp = 0;
+  }
+
+  else if (temp && tempb == 2) {
+    oneb.style.opacity = "0.5";
+    fiveb.style.opacity = "0.5";
+  }
 }
+
