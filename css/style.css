@@ -12,6 +12,23 @@ header h1 {
   line-height: 26.4px;
 }
 
+#shuffle {
+  background-color: white;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+#points {
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
 .flex-container {
   display: flex;
   margin-top: 50px;
